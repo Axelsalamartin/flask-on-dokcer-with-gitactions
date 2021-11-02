@@ -45,14 +45,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    # Checks-out your repository under $GITHUB_WORKSPACE
-    - uses: actions/checkout@v2
-
     # Download model
     - name: Download model from training job
       uses: actions/download-artifact@v2
       with:
         name: model
+        
+    # Checks-out your repository under $GITHUB_WORKSPACE
+    - uses: actions/checkout@v2
 
     # Set up Python 3.6 environment
     - name: Set up Python 3.8
