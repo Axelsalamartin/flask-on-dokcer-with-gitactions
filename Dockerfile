@@ -10,7 +10,7 @@ RUN pip install -r ./requirements.txt
 
 # API related files
 COPY ./src/inference/ /app/ 
-COPY ./src/training/models/ /app/models/
+COPY ./src/training/model.pickle /app/src/training/model.pickle
 
 # Container port on which the server will be listening
 EXPOSE 5000
