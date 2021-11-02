@@ -28,7 +28,7 @@ jobs:
         pip install -r requirements/training.txt
     
     # Create the model
-    - name: Install dependencies
+    - name: Create the model
       run: |
         python src/training/train.py
 
@@ -37,7 +37,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: model
-        path: src/training/models/model.pickle
+        path: src/training/model.pickle
 
 
   build:

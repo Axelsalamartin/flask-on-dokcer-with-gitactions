@@ -11,6 +11,6 @@ y = data.target
 model = svm.SVC().fit(X, y)
 
 # Persist model so that it can be used by different consumers
-models_folder = './src/training/models/'
+models_folder = './src/training/'
 model_file_name = 'model.pickle'
 pickle.dump(model, open(models_folder+model_file_name, 'wb'))
