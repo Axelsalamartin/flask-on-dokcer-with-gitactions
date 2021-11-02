@@ -7,7 +7,7 @@ import pickle
 app = Flask(__name__)
 
 # Loading the model
-model = pickle.load(open('src/training/models/model.pickle', 'rb'))
+model = pickle.load(open('src/training/model.pickle', 'rb'))
 
 # Home path
 @app.route('/')
