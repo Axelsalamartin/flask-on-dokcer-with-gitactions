@@ -50,7 +50,7 @@ jobs:
       uses: actions/download-artifact@v2
       with:
         name: model
-        
+
     # Checks-out your repository under $GITHUB_WORKSPACE
     - uses: actions/checkout@v2
 
@@ -76,6 +76,7 @@ jobs:
       uses: mr-smithers-excellent/docker-build-push@v4
       with:
         image: axelsalamartin/demo-flask-app
+        tags: v1, latest
         registry: docker.io
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
